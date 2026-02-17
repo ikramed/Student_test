@@ -362,6 +362,7 @@ body {
     }
 }
 
+/* ===== NAVBAR ===== */
 .sat-navbar{
     width:100%;
     height:55px;
@@ -419,16 +420,28 @@ body {
     }
 }
 
+/* ===== FOOTER ===== */
 .sat-footer{
     width:100%;
     height:45px;
     display:flex;
+    flex-wrap: wrap; /* responsive */
     align-items:center;
     justify-content:space-between;
     padding:0 25px;
     background:#002244;
     color:white;
     font-size:12px;
+}
+
+@media (max-width:600px){
+    .sat-footer {
+        flex-direction: column; /* العناصر عمودياً */
+        height: auto;
+        gap: 5px;
+        text-align: center;
+        padding: 10px;
+    }
 }
 
 body{
