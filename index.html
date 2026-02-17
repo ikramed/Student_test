@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital SAT Mock Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body> 
+<header class="sat-navbar">
+    <div class="nav-left">
+    <img src="english-castle.png" alt="Logo">
+    <div class="nav-text">
+        <span class="brand-name">ENGLISH CASTLE</span>
+        <hr class="brand-line">
+        <small>MOROCCO</small> 
+    </div>
+</div>
+
+    <div class="nav-center">
+        Digital SAT Mock Test – <small> March 2026</small>
+    </div>
+    <div class="nav-right">
+        <img src="sat-logo.png">
+    </div>
+</header>
+
+<div class="container">
+    <!-- Start Screen -->
+    <div id="start-screen" class="screen active">
+        <div class="card">
+            <div class="start-left">
+                <h1>Digital SAT Mock Test</h1>
+                <p>Welcome to the Digital SAT Mock Test Platform.</p>
+                <div class="input-group">
+                    <label for="student-name">Enter Your Name:</label>
+                    <input type="text" id="student-name" placeholder="Sara..." required>
+                </div>
+                <button id="start-btn" class="btn primary-btn">Start Test</button>
+            </div>
+
+            <div class="instructions-right">
+                <h3>Instructions</h3>
+                <ul>
+                    <li>Section 1: Reading & Writing (12 Questions, 30 Minutes)</li>
+                    <li>Section 2: Math (12 Questions, 30 Minutes)</li>
+                    <li>You cannot return to a previous section once completed.</li>
+                    <li>Results will be shown immediately after completion.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Test Screen -->
+    <div id="test-screen" class="screen">
+        <div class="header">
+            <div class="section-info">
+                <h2 id="section-title">Section 1: Reading & Writing</h2>
+            </div>
+            <div class="timer-container">
+                <span class="timer-label">Time Remaining: </span>
+                <span id="timer"> 30:00</span>
+            </div>
+        </div>
+        
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="card question-card">
+            <div class="question-header">
+                <span class="question-number" id="question-number">Question 1/12</span>
+                <span class="skill-tag" id="skill-tag">Vocabulary</span>
+            </div>
+            <div class="question-text" id="question-text"></div>
+            <div class="options-container" id="options-container"></div>
+        </div>
+
+        <div class="footer-nav">
+            <button id="prev-btn" class="btn secondary-btn" disabled>Previous</button>
+            <button id="next-btn" class="btn primary-btn" disabled>Next</button>
+        </div>
+    </div>
+
+    <!-- Report Screen -->
+    <div id="report-screen" class="screen">
+        <div class="card report-card">
+            <div class="report-header">
+                <h1>Digital SAT - Student Report</h1>
+                <div class="student-info">
+                    <p><strong>Student:</strong> <span id="report-name"></span></p>
+                    <p><strong>Date:</strong> <span id="report-date"></span></p>
+                </div>
+            </div>
+
+            <div class="score-summary">
+                <div class="score-box">
+                    <h3>Reading & Writing</h3>
+                    <p class="score-value" id="rw-score">0 / 12</p>
+                </div>
+                <div class="score-box">
+                    <h3>Math</h3>
+                    <p class="score-value" id="math-score">0 / 12</p>
+                </div>
+                <div class="score-box total">
+                    <h3>Total Score</h3>
+                    <p class="score-value" id="total-score">0 / 24</p>
+                </div>
+            </div>
+
+            <div class="skill-breakdown">
+                <h3>Skill Breakdown</h3>
+                <table id="skill-table">
+                    <thead>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Score</th>
+                            <th>Max</th>
+                            <th>Performance</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="performance-legend">
+                <p><span class="dot strong"></span> 85-100% Strong</p>
+                <p><span class="dot developing"></span> 70-84% Developing</p>
+                <p><span class="dot needs-improvement"></span> < 70% Needs Improvement</p>
+            </div>
+<br>
+            <button onclick="window.print()" class="btn secondary-btn no-print">Print Report</button>
+            <button onclick="location.reload()" class="btn primary-btn no-print">Take Test Again</button>
+        </div>
+    </div>
+</div>
+
+<!-- Confirmation Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h3>Finish Section?</h3>
+        <p>Are you sure you want to finish this section? You cannot return to it once you proceed.</p>
+        <div class="modal-actions">
+            <button id="cancel-modal" class="btn secondary-btn">Cancel</button>
+            <button id="confirm-modal" class="btn primary-btn">Yes, Proceed</button>
+        </div>
+    </div>
+</div>
+
+<footer class="sat-footer">
+    <div class="footer-left">
+        © 2026 English Castle Morocco. All rights reserved.
+    </div>
+    <div class="footer-center">
+        Digital SAT Mock Test Platform
+    </div>
+    <div class="footer-right">
+        Powered by English Castle
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
