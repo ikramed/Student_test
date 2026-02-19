@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body> 
 <header class="sat-navbar">
     <div class="nav-left">
@@ -35,7 +34,8 @@
 
 <div class="container">
     <!-- Start Screen -->
-    <div id="start-screen" class="screen active">
+    <div id="start-screen" class="screen active result-screen">
+
         <div class="card">
             <div class="start-left">
                 <h1>Digital SAT Mock Test</h1>
@@ -101,20 +101,21 @@
                 </div>
             </div>
 
-            <div class="score-summary">
-                <div class="score-box">
-                    <h3>Reading & Writing</h3>
-                    <p class="score-value" id="rw-score">0 / 12</p>
-                </div>
-                <div class="score-box">
-                    <h3>Math</h3>
-                    <p class="score-value" id="math-score">0 / 12</p>
-                </div>
-                <div class="score-box total">
-                    <h3>Total Score</h3>
-                    <p class="score-value" id="total-score">0 / 24</p>
-                </div>
-            </div>
+         <div class="score-summary">
+    <div class="score-box reading">
+        <h3>Reading & Writing</h3>
+        <p class="score-value" id="rw-score">0 / 12</p>
+    </div>
+    <div class="score-box math">
+        <h3>Math</h3>
+        <p class="score-value" id="math-score">0 / 12</p>
+    </div>
+    <div class="score-box total">
+        <h3>Total Score</h3>
+        <p class="score-value" id="total-score">0 / 24</p>
+    </div>
+</div>
+
 
             <div class="skill-breakdown">
                 <h3>Skill Breakdown</h3>
